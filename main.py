@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
         self.setGeometry(300, 300, 600, 500)
 
     def save_signature(self):
-        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", os.getenv('HOME'), "PNG(*.png);;JPEG(*.jpg *.jpeg)")
+        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", os.getenv('HOME'), "PNG(*.png)")  #;;JPEG(*.jpg *.jpeg)
         if file_path:
             pixmap = self.signature_pad.grab()
             pixmap.save(file_path)
@@ -61,3 +61,6 @@ if __name__ == '__main__':
     mainWin = MainWindow()
     mainWin.show()
     sys.exit(app.exec_())
+
+
+#ssh -R 8080:localhost8080 mallu.com
