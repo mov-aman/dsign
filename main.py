@@ -61,6 +61,3 @@ if __name__ == '__main__':
     mainWin = MainWindow()
     mainWin.show()
     sys.exit(app.exec_())
-
-
-#ssh -R 8080:localhost8080 mallu.com
