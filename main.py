@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
         self.setGeometry(300, 300, 600, 500)
 
     def save_signature(self):
-        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", os.getenv('HOME'), "PNG(*.png)")  #;;JPEG(*.jpg *.jpeg)
+        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", os.getenv('HOME'), "PNG(*.png)")  #;;JPEG(*.jpg *.jpeg) #testing webhook
         if file_path:
             pixmap = self.signature_pad.grab()
             pixmap.save(file_path)
